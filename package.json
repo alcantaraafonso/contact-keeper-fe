@@ -36,7 +36,6 @@
 			"last 1 safari version"
 		]
 	},
-	"proxy": "https://contact-keeper-be.herokuapp.com",
 	"devDependencies": {
 		"http-server": "^0.12.3"
 	}

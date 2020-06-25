@@ -19,6 +19,8 @@ import {
 } from '../types';
 
 const ContactState = (props) => {
+	const URL = 'https://contact-keeper-be.herokuapp.com';
+
 	const initialState = {
 		contacts: null,
 		current: null,
@@ -32,7 +34,7 @@ const ContactState = (props) => {
 	//Get Contacts
 	const getContacts = async () => {
 		try {
-			const res = await axios.get('/api/contacts');
+			const res = await axios.get(`${URL}/api/contacts`);
 			dispatch({ type: GET_CONTACTS, payload: res.data });
 		} catch (err) {
 			dispatch({ type: CONTACT_ERROR, payload: err.response.msg });
@@ -47,7 +49,7 @@ const ContactState = (props) => {
 			}
 		};
 		try {
-			const res = await axios.post('/api/contacts', contact, config);
+			const res = await axios.post(`${URL}/api/contacts`, contact, config);
 			dispatch({ type: ADD_CONTACT, payload: res.data });
 		} catch (error) {
 			dispatch({ type: CONTACT_ERROR, payload: error.response.msg });
@@ -57,7 +59,7 @@ const ContactState = (props) => {
 	//Delete Contact
 	const deleteContact = async (id) => {
 		try {
-			const res = await axios.delete(`/api/contacts/${id}`);
+			const res = await axios.delete(`${URL}/api/contacts/${id}`);
 			dispatch({ type: DELETE_CONTACT, payload: id });
 		} catch (error) {
 			dispatch({ type: CONTACT_ERROR, payload: error.response.msg });
@@ -73,7 +75,7 @@ const ContactState = (props) => {
 		};
 		try {
 			const res = await axios.put(
-				`/api/contacts/${contact._id}`,
+				`${URL}/api/contacts/${contact._id}`,
 				contact,
 				config
 			);
