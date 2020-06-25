@@ -1,1 +1,1 @@
-export default URL = 'https://contact-keeper-be.herokuapp.com';
+export const URL = 'https://contact-keeper-be.herokuapp.com';
