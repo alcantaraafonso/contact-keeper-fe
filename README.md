@@ -3,7 +3,7 @@
 Este projeto foi criado usando React 16 e utiliza conceitos de function componentes e hooks (useState, useEffect e useContext), também usa um CSS próprio para criar as views, para o Front-end. O Back-end é construído em NodeJS, Express e MongoDB. <br />
 
 Ambos estão disponíveis na cloud Heroku e o front-end pode ser acesso aqui: <br />
-[http://localhost:3000](http://localhost:3000)
+[https://contacts-keeper-fe.herokuapp.com/](https://contacts-keeper-fe.herokuapp.com/)
 
 ### `Front-end`
 
