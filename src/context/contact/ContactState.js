@@ -18,8 +18,10 @@ import {
 	CONTACT_ERROR
 } from '../types';
 
+import { URL } from '../../utils/consts';
+
 const ContactState = (props) => {
-	const URL = 'https://contact-keeper-be.herokuapp.com';
+	
 
 	const initialState = {
 		contacts: null,
